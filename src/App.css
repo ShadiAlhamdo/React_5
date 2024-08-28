@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+h1,h2{
+    font-family: "Playfair Display", sans-serif
+}
+.row{
+    width: 50%;
+}
+
+span{
+    color: crimson;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+h2{
+    font-size: 30px;
+    line-height: 35px;
+    max-width: 200px 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.top{
+    margin-top: 80px;
+}
+/*----------- left-content--------------*/
+.home{
+    display: flex;
+}
+.left-content,.right-content{
+    width: 50%;
+}
+.content{
+    padding:30px ;
+}
+.left-content{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    color: white;
+    overflow: hidden;
+}
+.home-img img{
+    position: absolute;
+    width:100%;
+    left: 0%;
+    top: 0%;
+    height: 110vh !important;
+    z-index: -1;
+}
+.qrcode img{
+    max-height: 150px;
+}
+.logo{
+    width: 70px ;
+    height: 70px;
+    line-height: 70px;
+    color: #000;
+    background-color: white;
+}
+.logo h1{
+    font-size: 40px;
+
+    text-align: center;
+}
+.left-content .text{
+    width: 45%;
+    margin-top: 15%;
+}
+.left-content .text p{
+    margin:  20px 0 5px 0;
+}
+.left-content .text2{
+    float: right;
+    text-align: right;
+}
+.left-content .qrcode img{
+    margin-top: 35%;
+}
+
+/*---------right-content-------------*/
+
+.right-content{
+    background-color: #2e2a2a;
+    padding: 40px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+.box img{
+    max-width:612px;
+    max-height: 408px;
+
+}
+.img {
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+img {
+    transition: all 0.5s ease;
+}
+.img:hover img{
+    transform: scale(1.1);
+}
+
+/*-----Midea--------*/
+@media (max-width:768px) {
+    .home{
+        flex-direction: column;
+    }
+    .left-content,.right-content{
+        width: 100%;
+        position: relative;
+    }
+    
+}
+@media (max-width:730px) {
+    .home{
+       width:700px;
+    }
+    .left-content,.right-content{
+        max-width: 100%;
+    }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+  
+}
+@media (max-width:560px) {
+    .home{
+       width:500px;
+    }
+    .left-content,.right-content{
+        max-width: 100%;
+    }
+  
+}
